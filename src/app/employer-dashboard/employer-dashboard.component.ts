@@ -16,7 +16,7 @@ export class EmployerDashboardComponent implements OnInit {
   }
 
   loadJobs() {
-    this.http.get<any[]>('http://localhost:5000/get-posted-jobs')
+    this.http.get<any[]>('https://jobhub-backend-wlfu.onrender.com/get-posted-jobs')
       .subscribe(
         (data) => { this.jobs = data; }, // ✅ Store jobs in the array
         (error) => { console.error("Error fetching jobs:", error); }

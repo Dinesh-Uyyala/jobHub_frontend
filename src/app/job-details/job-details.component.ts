@@ -19,7 +19,7 @@ export class JobDetailsComponent implements OnInit {
   }
 
   getJobDetails(id: string) {
-    this.http.get<any>(`http://localhost:5000/get-job/${id}`).subscribe(
+    this.http.get<any>(`https://jobhub-backend-wlfu.onrender.com/get-job/${id}`).subscribe(
       data => {
         this.job = data;
       },
@@ -45,7 +45,7 @@ export class JobDetailsComponent implements OnInit {
       applicant_email: this.applicant.email
     };
   
-    this.http.post('http://localhost:5000/apply-job', application).subscribe(
+    this.http.post('https://jobhub-backend-wlfu.onrender.com/apply-job', application).subscribe(
       res => {
         alert('Application submitted successfully!');
       },

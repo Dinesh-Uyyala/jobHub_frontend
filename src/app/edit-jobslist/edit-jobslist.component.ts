@@ -32,7 +32,7 @@ export class EditJobslistComponent implements OnInit {
   }
 
   getJobDetails(id: string) {
-    this.http.get<any>(`http://localhost:5000/get-job/${id}`)
+    this.http.get<any>(`https://jobhub-backend-wlfu.onrender.com/get-job/${id}`)
       .subscribe(
         (data) => {
           this.job = data;
@@ -51,7 +51,7 @@ export class EditJobslistComponent implements OnInit {
       return;
     }
   
-    this.http.put(`http://localhost:5000/update-job/${this.jobId}`, this.job)
+    this.http.put(`https://jobhub-backend-wlfu.onrender.com/update-job/${this.jobId}`, this.job)
       .subscribe(
         () => {
           alert("Job updated successfully!");

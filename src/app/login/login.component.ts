@@ -17,7 +17,7 @@ export class LoginComponent {
   ) {}
 
   handleLogin() {
-    this.http.post("http://localhost:5000/login", this.userLogin).subscribe(
+    this.http.post("https://jobhub-backend-wlfu.onrender.com/login", this.userLogin).subscribe(
       (response: any) => {
         console.log("Full API Response:", response); // ✅ Log entire response
   

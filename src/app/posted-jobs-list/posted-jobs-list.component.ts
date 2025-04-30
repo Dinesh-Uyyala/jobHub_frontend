@@ -19,7 +19,7 @@ export class PostedJobsListComponent implements OnInit {
   fetchJobs() {
     const email = localStorage.getItem('userEmail');
     if (email) {
-      this.http.get<any[]>(`http://localhost:5000/get-posted-jobs?email=${email}`).subscribe(
+      this.http.get<any[]>(`https://jobhub-backend-wlfu.onrender.com/get-posted-jobs?email=${email}`).subscribe(
         (response) => {
           this.jobs = response;
         },
@@ -32,7 +32,7 @@ export class PostedJobsListComponent implements OnInit {
 
   deleteJob(id: number) {
     if (confirm('Are you sure you want to delete this job?')) {
-      this.http.delete(`http://localhost:5000/delete-job/${id}`).subscribe(
+      this.http.delete(`https://jobhub-backend-wlfu.onrender.com/delete-job/${id}`).subscribe(
         () => {
           this.jobs = this.jobs.filter(job => job.id !== id);
           alert('Job deleted successfully!');

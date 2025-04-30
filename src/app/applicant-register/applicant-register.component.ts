@@ -19,7 +19,7 @@ export class ApplicantRegisterComponent {
   constructor(private http: HttpClient) {}
 
   submitApplicant() {
-    this.http.post('http://localhost:5000/applicant-register', this.applicant).subscribe(
+    this.http.post('https://jobhub-backend-wlfu.onrender.com/applicant-register', this.applicant).subscribe(
       (response) => {
         alert('Application submitted successfully!');
         console.log('Applicant Data:', response);

@@ -13,7 +13,7 @@ export class JobsListComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
-    this.http.get<any>('http://localhost:5000/jobs').subscribe(
+    this.http.get<any>('https://jobhub-backend-wlfu.onrender.com/jobs').subscribe(
       (response) => {
         if (response.success) {
           this.jobs = response.data;

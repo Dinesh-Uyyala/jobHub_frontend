@@ -23,7 +23,7 @@ export class ApplicantProfileComponent implements OnInit {
 
   getProfile(email: string) {
     console.log("Fetching profile for email:", email); // Debugging
-    this.http.get(`http://localhost:5000/get-profile-by-email?email=${email}`).subscribe(
+    this.http.get(`https://jobhub-backend-wlfu.onrender.com/get-profile-by-email?email=${email}`).subscribe(
       (data: any) => {
         console.log('API Response:', data); // ✅ Check response
         this.user = data;

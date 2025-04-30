@@ -23,7 +23,7 @@ ngOnInit(): void {
 
   saveProfile() {
     console.log('User Data:', this.user);
-    this.http.post("http://localhost:5000/create-profile",(this.user)).subscribe(response=>{
+    this.http.post("https://jobhub-backend-wlfu.onrender.com/create-profile",(this.user)).subscribe(response=>{
       console.log(response)
   })
 }

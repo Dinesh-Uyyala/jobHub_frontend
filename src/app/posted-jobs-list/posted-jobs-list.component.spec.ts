@@ -27,7 +27,7 @@ export class PostedJobsListComponent implements OnInit {
 
   getPostedJobs(email: string) {
     console.log("Fetching jobs posted by:", email);
-    this.http.get(`http://localhost:5000/get-posted-jobs?email=${email}`).subscribe(
+    this.http.get(`https://jobhub-backend-wlfu.onrender.com/get-posted-jobs?email=${email}`).subscribe(
       (data: any) => {
         console.log('API Response:', data);
         this.jobs = data;
@@ -48,7 +48,7 @@ export class PostedJobsListComponent implements OnInit {
     console.log('Deleting job with ID:', jobId); // 🔍 Debugging
   
     if (confirm('Are you sure you want to delete this job?')) {
-      this.http.delete(`http://localhost:5000/delete-job/${jobId}`).subscribe(
+      this.http.delete(`https://jobhub-backend-wlfu.onrender.com/delete-job/${jobId}`).subscribe(
         () => {
           console.log('Job deleted:', jobId);
           this.jobs = this.jobs.filter(job => job.id !== jobId); // Remove from UI

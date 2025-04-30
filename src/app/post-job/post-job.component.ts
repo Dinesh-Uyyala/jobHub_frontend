@@ -24,7 +24,7 @@ export class PostJobComponent implements OnInit {
   postjob(){
     console.log(this.job, "You posted a job successfully!");
 
-    this.http.post("http://localhost:5000/post-job", this.job).subscribe(
+    this.http.post("https://jobhub-backend-wlfu.onrender.com/post-job", this.job).subscribe(
       (response) => {
         console.log('Job posted successfully:', response);
         // Optionally reset form here

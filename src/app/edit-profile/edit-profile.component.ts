@@ -28,7 +28,7 @@ export class EditProfileComponent implements OnInit {
   }
 
   fetchUserProfile() {
-    this.http.get(`http://localhost:5000/get-profile/${this.userEmail}`).subscribe(
+    this.http.get(`https://jobhub-backend-wlfu.onrender.com/get-profile/${this.userEmail}`).subscribe(
       (data: any) => {
         console.log("Fetched User Data:", data);
         if (data) {
@@ -50,7 +50,7 @@ export class EditProfileComponent implements OnInit {
       return;
     }
 
-    this.http.put(`http://localhost:5000/update-profile/${this.userEmail}`, this.user)
+    this.http.put(`https://jobhub-backend-wlfu.onrender.com/update-profile/${this.userEmail}`, this.user)
       .subscribe(
         (response: any) => {
           alert("Profile updated successfully!");

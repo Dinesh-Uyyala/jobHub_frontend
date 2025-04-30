@@ -32,7 +32,7 @@ export class EmployerRegisterComponent implements OnInit {
 
     console.log("User Data:", this.user);
 
-    this.http.post("http://localhost:5000/employer-register", this.user)
+    this.http.post("https://jobhub-backend-wlfu.onrender.com/employer-register", this.user)
       .subscribe({
         next: (response) => {
           console.log("Registration successful!", response);

@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Employer Registration</h2>
+  <form (ngSubmit)="handleRegister()">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" [(ngModel)]="user.FullName" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="user.Email" name="email" required>
+
+    <label for="company">Company Name:</label>
+    <input type="text" id="company" [(ngModel)]="user.CompanyName" name="company" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="user.Password" name="Password" required>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" [(ngModel)]="user.ConfirmPassword" name="confirmPassword" required>
+
+    <button type="submit" (click)="consoleCheck()">Register</button>
+  </form>
+</div>
+
+ 
+    

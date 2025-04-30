@@ -1,0 +1,67 @@
+/* Full-page centered layout */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Button container */
+  .options {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Common button styles */
+  .btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Employer button */
+  .employer {
+    background-color: #ffcc00;
+    color: #333;
+  }
+  
+  .employer:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Applicant button */
+  .applicant {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .applicant:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .options {
+      flex-direction: column;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  }
+  

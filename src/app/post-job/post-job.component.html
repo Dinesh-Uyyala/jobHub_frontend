@@ -1,0 +1,51 @@
+<body>
+<div class="form-container">
+  <p class="title">Post Your Job Requirement here!👇</p>
+
+  <form class="form" >
+    <div class="input-group">
+      <label>Your Email</label>
+      <input type="text" name="employer_email" [(ngModel)]="job.employer_email">
+    </div>
+    <div class="input-group">
+      <label>Job Title</label>
+      <input type="text" name="JobTitle" [(ngModel)]="job.JobTitle">
+    </div>
+    <div class="input-group">
+      <label>Company</label>
+      <input type="text" name="company" [(ngModel)]="job.company">
+    </div>
+
+    <div class="input-group">
+      <label>Skills</label>
+      <input type="text" name="Skills" [(ngModel)]="job.Skills">
+    </div>
+
+    <div class="input-group">
+      <label>Location</label>
+      <input type="text" name="Location" [(ngModel)]="job.Location">
+    </div>
+
+    <div class="input-group">
+      <label>Qualification</label>
+      <input type="text" name="Qualification" [(ngModel)]="job.Qualifications">
+    </div>
+
+    <div class="input-group">
+      <label>Description</label>
+      <input type="text" name="Description" [(ngModel)]="job.jobDescription">
+    </div>
+
+    <div class="input-group">
+      <label>Salary</label>
+      <input type="text" name="Salary" [(ngModel)]="job.Salary">
+    </div>
+
+    <div class="input-group">
+      <label>Experience</label>
+      <input type="text" name="Experiance" [(ngModel)]="job.Experiance">
+    </div>
+    <button class="sign" (click)="postjob()">Post job</button>
+  </form>
+</div>
+</body>

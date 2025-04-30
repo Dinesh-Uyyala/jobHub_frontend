@@ -1,0 +1,17 @@
+<div class="container">
+  <aside class="sidebar">
+      <h2>APPLICANT DASHBOARD</h2>
+      <ul>
+          <li><a routerLink="/applicant-dashboard/content">Home</a></li>
+          <li><a routerLink="/applicant-dashboard/find a job"> Find a job</a></li>
+          <li><a routerLink="/applicant-dashboard/profileform-applicant"> Create Profile</a></li>
+          <li><a routerLink="/applicant-dashboard/profile">View Profile</a></li>
+          <li><a routerLink="/applicant-dashboard/edit-profile">Edit Profile</a></li>
+      </ul>
+  </aside>
+  
+  <main class="content">
+      <div class="bg-image" *ngIf="!hasActiveRoute"></div>
+      <router-outlet (activate)="onRouteActivate()"></router-outlet>
+  </main>
+</div>

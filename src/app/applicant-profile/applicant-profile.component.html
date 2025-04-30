@@ -1,0 +1,34 @@
+<div class="profile-container" *ngIf="user">
+  <div class="profile-card">
+    <div class="profile-header">
+      <h2>{{ user?.FullName }}</h2>
+      <p>Email: {{ user?.Email }}</p>
+      
+    </div>
+    <div class="profile-section">
+      <h3>Phone</h3>
+      <p>Phone: {{ user?.Phone}}</p>
+      
+    </div>
+    
+    <div class="profile-section">
+      <h3>Resume</h3>
+      <p>Resume: {{ user?.Resume }}</p>
+      
+    </div>
+    
+    <div class="profile-section">
+      <h3>Skills</h3>
+      <p>skills: {{ user?.Skills }}</p>
+      
+    </div>
+    
+    <div class="profile-section">
+      <h3>Education</h3>
+      <p>education: {{ user?.Education }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Debugging Output -->
+<!-- <pre *ngIf="user">{{ user | json }}</pre> -->

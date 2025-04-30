@@ -1,0 +1,44 @@
+<div class="background">
+  <div class="container">
+      <h2>Applicant Profile</h2>
+      <form (ngSubmit)="saveProfile()">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your full name" [(ngModel)]="user.name" name="name">
+          </div>
+      
+          <div class="col-md-6 form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" [(ngModel)]="user.email" name="email">
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" [(ngModel)]="user.phone" name="phone">
+          </div>
+      
+          <div class="col-md-6 form-group">
+            <label for="education">Education</label>
+            <input type="text" id="education" class="form-control" placeholder="Enter your education" [(ngModel)]="user.education" name="education">
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" class="form-control" placeholder="Enter your skills" [(ngModel)]="user.skills" name="skills">
+          </div>
+      
+          <div class="col-md-6 form-group">
+            <label for="resume">Resume URL</label>
+            <input type="text" id="resume" class="form-control" placeholder="Enter your URL" [(ngModel)]="user.Resume" name="Resume">
+          </div>
+        </div>
+      
+        <button type="submit" class="btn btn-primary mt-3">Save Profile</button>
+      </form>
+  </div>
+</div>

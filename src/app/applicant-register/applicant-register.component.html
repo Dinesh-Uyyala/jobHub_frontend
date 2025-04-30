@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Registration</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #D32F2F;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #d1d1d1;
+            border-radius: 6px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+        input:focus, select:focus {
+            border-color: #D32F2F;
+            outline: none;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            background: #D32F2F;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #B71C1C;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Applicant Registration</h2>
+
+        <form (ngSubmit)="submitApplicant()">
+            <label>Name:</label>
+            <input type="text" [(ngModel)]="applicant.FullName" name="FullName" required />
+        
+            <label>Email:</label>
+            <input type="email" [(ngModel)]="applicant.Email" name="Email" required />
+        
+            <label>Password:</label>
+            <input type="password" [(ngModel)]="applicant.Password" name="Password" required />
+        
+            <label>Phone:</label>
+            <input type="text" [(ngModel)]="applicant.Phone" name="Phone" required />
+        
+            <label>Resume URL:</label>
+            <input type="text" [(ngModel)]="applicant.Resume" name="Resume" placeholder="Paste Resume URL" required />
+        
+            <img *ngIf="applicant.Resume" [src]="applicant.Resume" alt="Resume Preview" width="100" height="100" />
+        
+            <button type="submit">Submit</button>
+        </form>
+        
+        
+    </div>
+</body>
+</html>

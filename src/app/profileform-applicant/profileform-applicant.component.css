@@ -1,0 +1,47 @@
+.background {
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* Left Side Background Image */
+.background::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35%; /* Covers left half of the screen */
+  height: 100%;
+  background: url('/assets/img/applicant-bg 2.jpg') no-repeat center center;
+  background-size:50%;
+}
+
+/* Centering the form */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .background::before {
+    width: 100%; /* Full width for small screens */
+    height: 200px; /* Adjust height */
+  }
+
+  .container {
+    margin-top: 220px; /* Push form down */
+  }
+}

@@ -1,0 +1,20 @@
+<div *ngIf="job" class="job-details-container">
+    <h2>{{ job.JobTitle }}</h2>
+    <p><strong>Employer Email:</strong> {{ job.employer_email }}</p>
+    <p><strong>Company:</strong> {{ job.company }}</p>
+    <p><strong>Location:</strong> {{ job.Location }}</p>
+    <p><strong>Qualification:</strong> {{ job.Qualification }}</p>
+    <p><strong>Skills:</strong> {{ job.Skills }}</p>
+    <p><strong>Experience:</strong> {{ job.Experiance }}</p>
+    <p><strong>Description:</strong> {{ job.JobDescription }}</p>
+    <p><strong>Salary:</strong> {{ job.Salary }}</p>
+  
+    <form (ngSubmit)="submitApplication()" #applyForm="ngForm">
+        <input type="text" placeholder="Your Name" [(ngModel)]="applicant.name" name="name" required>
+        <input type="email" placeholder="Your Email" [(ngModel)]="applicant.email" name="email" required>
+        <!-- You can also add resume file input here -->
+      
+        <button class="apply-btn" type="submit">Apply Now</button>
+      </form>
+  </div>
+  

@@ -1,0 +1,103 @@
+/* General Page Styling */
+body {
+  background: linear-gradient(120deg, #f880f8, #ee9ca7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+/* Profile Card */
+.profile-card {
+  background: white;
+  width: 420px;
+  border-radius: 18px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  padding: 30px;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Hover effect */
+.profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Header */
+.profile-header {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  padding: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: capitalize;
+  border-radius: 12px;
+}
+
+/* Profile Email */
+.profile-header p {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: normal;
+  margin: 5px 0 0;
+}
+
+/* Profile Sections */
+.profile-section {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.profile-section:last-child {
+  border-bottom: none;
+}
+
+/* Section Headings */
+.profile-section h3 {
+  color: #ff758c;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Section Content */
+.profile-section p {
+  color: #333;
+  font-size: 15px;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* Glowing Effect */
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(circle, rgba(255, 120, 140, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.profile-card:hover::before {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+  .profile-card {
+    width: 90%;
+    padding: 20px;
+  }
+}

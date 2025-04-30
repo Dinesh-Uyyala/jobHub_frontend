@@ -1,0 +1,18 @@
+<div class="container">
+    <aside class="sidebar">
+        <h2>EMPLOYER DASHBOARD</h2>
+        <ul>
+            <li><a routerLink="/employer-dashboard/content">Home</a></li>
+            <li><a routerLink="/employer-dashboard/post-job">Post Jobs</a></li>
+            <li><a routerLink="/employer-dashboard/posted-jobs-list">Posted Jobs</a></li>
+            <li *ngFor="let job of jobs">
+              <a [routerLink]="['/edit-jobslist', job.id]">Edit {{ job.JobTitle }}</a>
+            </li>
+        </ul>
+    </aside>
+    <main class="content">
+        <div class="bg-image" *ngIf="!routerOutlet.isActivated"></div>
+        <router-outlet #routerOutlet="outlet"></router-outlet>
+    </main>
+  </div>
+  
